@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Crime Detective</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="home">
+<canvas id="matrix"></canvas>
+<div class="overlay"></div>
+<img src="images/hacker.png" class="hacker">
+
+<h1 class="glow">CYBER CRIME DETECTIVE</h1>
+<p id="typing"></p>
+
+<button onclick="goToName()">▶ START</button>
+</div>
+
+<div id="nameScreen" class="center" style="display:none">
+<h2>Enter Agent Name</h2>
+<input id="playerName" placeholder="Your Name"><br><br>
+<button onclick="goToRules()">Continue</button>
+</div>
+
+<div id="rules" class="center" style="display:none">
+<h2>📜 Rules</h2>
+<p>
+✔ Read each case carefully<br>
+✔ Choose safest option<br>
+✔ Use hints wisely<br>
+✔ You have 3 lives<br>
+✔ Think before you click
+</p>
+<button onclick="goToGame()">Start Mission</button>
+</div>
+
+<div id="game" style="display:none">
+
+<h3 id="missionTitle"></h3>
+<p id="missionStory"></p>
+
+<div id="progress"><div id="bar"></div></div>
+
+<p>
+❤️ <span id="lives">3</span> |
+⏱ <span id="time">0</span> |
+🏆 <span id="score">0</span>
+</p>
+
+<p id="question"></p>
+
+<div id="options"></div>
+
+<button onclick="showHint()">💡 Hint</button>
+<p id="hint"></p>
+
+<p id="result"></p>
+<button onclick="nextQ()">Next</button>
+
+</div>
+
+<audio id="introSound" src="sounds/intro.mp3"></audio>
+<audio id="voice" src="sounds/voice.mp3"></audio>
+<audio id="bg" src="sounds/bg.mp3" loop></audio>
+<audio id="click" src="sounds/click.mp3"></audio>
+<audio id="correct" src="sounds/correct.mp3"></audio>
+<audio id="wrong" src="sounds/wrong.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
